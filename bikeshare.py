@@ -16,6 +16,7 @@ li_months = []
 li_lastdays = []
 li_days_of_week  = []
 
+# constant values for interval 
 intervals = (
     ('months', 2419200),    # 60 * 60 * 24 * 7 * 4
     ('weeks', 604800),      # 60 * 60 * 24 * 7
