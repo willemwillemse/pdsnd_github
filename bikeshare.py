@@ -184,10 +184,10 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     total_travel_time = display_time(df['Total Time sec'].sum(),6)
-    print("\nThe total travel time was - {}.".format(total_travel_time))
+    print("\nTotal travel time was - {}.".format(total_travel_time))
 
     mean_travel_time = display_time(df['Total Time sec'].mean(),6)
-    print("\nThe mean travel time was - {}.".format(mean_travel_time))
+    print("\nMean travel time was - {}.".format(mean_travel_time))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -203,13 +203,13 @@ def user_stats(df):
     print("\n",df.groupby(['Gender']).size().to_frame('count').reset_index())
     
     earliest_year_of_birth = df.loc[df['Birth Year']>0, 'Birth Year'].min()
-    print("\nThe earliest year of birth is - {}.".format(earliest_year_of_birth))
+    print("\nEarliest year of birth is - {}.".format(earliest_year_of_birth))
     
     recent_year_of_birth = df.loc[df['Birth Year']>0, 'Birth Year'].max()
-    print("\nThe most recent year of birth is - {}.".format(recent_year_of_birth))
+    print("\nMost recent year of birth is - {}.".format(recent_year_of_birth))
     
     most_common_year_of_birth = df.loc[df['Birth Year']>0, 'Birth Year'].value_counts().idxmax()
-    print("\nThe most common year of birth is - {}.".format(most_common_year_of_birth))
+    print("\nMost common year of birth is - {}.".format(most_common_year_of_birth))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
